@@ -1,0 +1,32 @@
+services:
+  simple-ascii-backend:
+    container_name: simple-ascii-backend
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    # ports:
+    #   - "3002:3002"
+    restart: unless-stopped
+
+  simple-ascii-frontend:
+    container_name: simple-ascii-frontend
+    build:
+      context: ./my-app
+      dockerfile: Dockerfile
+    # ports:
+    #   - "3001:3001"
+    restart: unless-stopped
+    depends_on:
+      - simple-ascii-backend
+
+  nginx:
+    image: nginx:alpine
+    container_name: simple-ascii-nginx
+    volumes:
+      
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "3011:80"
+    depends_on:
+      - simple-ascii-frontend
+      - simple-ascii-backend
