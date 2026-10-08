@@ -5,7 +5,7 @@
 ## 🔗 Демо-версия проекта (Live Demo)
 
 Протестировать конвертер в реальном времени можно по ссылке (работает через devTunnel):
-👉 [Открыть GIF-to-ASCII Converter](https://bbp7m2jw-3011.jpe1.devtunnels.ms/)
+👉 [Открыть GIF-to-ASCII Converter](https://ascii.arcwagner.duckdns.org/)
 
 > ⚠️ **Если ссылка не открывается:**
 > 1. Отключите VPN и попробуйте перезагрузить страницу.
